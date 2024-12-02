@@ -1,17 +1,35 @@
 import React from "react";
+import "../styles/result.css"
 
 function Result({ drink, compatible, description, drinkImage, compatibleImage, restartQuiz }) {
   return (
-    <div>
-      <h2>Your Drink: {drink}</h2>
-      <img src={drinkImage} alt={drink} />
-      <p>{description}</p>
+    <div className='borderedArea'>
+      <div className="resultContainer">
+        <div className='resultHeader'>
+          <h3>⋆˙⟡ Your special drink is ready! ✧˙⋆</h3>
+        </div>
+        
+        <div className='resultDrink'>
+          <h1>{drink}</h1>
+            <img src={drinkImage} alt={drink} />
+            <p>{description}</p>
+        </div>
 
-      <h2>Compatible Drink: {compatible}</h2>
-      <img src={compatibleImage} alt={compatible} />
-      <p>You and {compatible} would get along great too!</p>
+        <div className='resultPair'>
 
-      <button onClick={restartQuiz}>Take the Quiz Again</button>
+          <div className="pairLeft">
+            <h4>Your perfect pair</h4>
+            <h3>{compatible}</h3>
+          </div>
+
+          <div className='pairRight'>
+            <img src={compatibleImage} alt={compatible} />
+          </div>
+        </div>
+
+      </div>
+
+      <button className='quizAgain' onClick={restartQuiz}>Take the Quiz Again &gt;</button>
     </div>
   );
 }

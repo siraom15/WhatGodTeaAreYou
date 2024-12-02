@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Question from "./Question";
 import Result from "./Result";
 
+import "../styles/next-btn.css"
+
 import pumpkinSpiceLatte from '../images/pumpkin-spice-latte.png';
 import goldenMilk from '../images/golden-milk.png';
 import chaiLatte from '../images/chai-latte.png';
 import hotChocolate from '../images/hot-chocolate.png';
 import peppermintMocha from '../images/peppermint-mocha.png';
 import matchaLatte from '../images/matcha-latte.png';
-import theCabin from '../images/the-cabin.png';
-
 
 const questions = [
   {
@@ -60,9 +60,6 @@ const questions = [
       { text: "A soft-knit blanket, perfect for wrapping yourself up in comfort.", drink: "Golden Milk" }
     ]
   },
-  
-  
-  // Add more questions here
 ];
 
 const drinks = {
@@ -100,17 +97,33 @@ const drinks = {
 
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
   const [scores, setScores] = useState({});
   const [result, setResult] = useState(null);
 
   function handleAnswer(drink) {
-    setScores((prevScores) => ({
-      ...prevScores,
-      [drink]: (prevScores[drink] || 0) + 1
-    }));
+    setScores((prevScores) => {
+      const newScores = { ...prevScores };
+  
+      // Decrease the score for the previously selected drink
+      if (selectedAnswer) {
+        newScores[selectedAnswer] -= 1;
+      }
+  
+      // Increase the score for the newly selected drink
+      newScores[drink] = (newScores[drink] || 0) + 1;
+  
+      return newScores;
+    });
+  
+    setSelectedAnswer(drink); // Mark the new answer as selected
+  }
+  
 
+  function handleNextQuestion() {
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
+      setSelectedAnswer(null); // Reset selected answer for the next question
     } else {
       calculateResult();
     }
@@ -151,17 +164,22 @@ function Quiz() {
   }
 
   return (
-    <>
-      <img src={theCabin} />
-      
+    <div className="quiz-container-with-next">
       <Question
-      question={questions[currentQuestion].question}
-      options={questions[currentQuestion].options}
-      onAnswer={handleAnswer}
+        question={questions[currentQuestion].question}
+        options={questions[currentQuestion].options}
+        onAnswer={handleAnswer}
+        selectedAnswer={selectedAnswer}
       />
-    </>
 
-  );
+      <button className="next-btn"
+        onClick={handleNextQuestion}
+        disabled={!selectedAnswer} // Disable the button until an answer is selected
+      >
+        Next &gt;
+      </button>
+    </div>
+);
 }
 
 export default Quiz;

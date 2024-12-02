@@ -1,0 +1,20 @@
+.quiz-container-with-next {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-btn {
+    background: none;
+    color: azure;
+    padding: 0 0 0 0;
+    width: fit-content;
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.next-btn:hover {
+    text-decoration: underline; /* Add underline on hover */
+    background: none;
+    padding: none;
+}

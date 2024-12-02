@@ -1,0 +1,163 @@
+.borderedArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    border: 2px dashed #A6E1FA;
+    box-sizing: border-box;
+}
+
+.resultDrink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: calc(100vw * 0.01);
+    padding-bottom: calc(100vw * 0.03);
+    border-bottom: 2px solid #172A3A;
+}
+
+.resultDrink .resultRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: calc(100vw * 0.008);
+    padding-left: calc(100vw * 0.02);
+    padding-right: calc(100vw * 0.02);
+}
+
+.resultDrink h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: calc(100vw * 0.01);
+    font-size: xx-large;
+    color: azure;
+}
+
+.resultDrink img {
+    padding-top: calc(100vw * 0.03);
+    height: 20vh;
+    width: 20vh;
+    object-fit: contain;
+    margin: 0;
+}
+
+.resultDrink p {
+    padding-left: calc(100vw * 0.05);
+    padding-right: calc(100vw * 0.05);
+}
+
+.resultHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: calc(100vw * 0.03);
+    padding-bottom: calc(100vw * 0.03);
+
+    background-color: #A6E1FA;
+}
+
+.resultHeader h3 {
+    font-size: x-large;
+    font-family: "Darumadrop One", sans-serif;
+    margin: 0;
+    color: #172A3A;
+    font-weight: 400;
+    text-align: center;
+}
+
+.resultDrink p {
+    font-size: 1.5vh;
+    color: azure;
+    margin-bottom: 0;
+}
+
+.resultPair {
+    display: flex;
+    flex-direction: row;
+
+
+    width: 100%;
+
+    padding-top: calc(100vw * 0.005);
+    padding-bottom: calc(100vw * 0.005);
+    padding-left: calc(100vw * 0.01);
+    padding-right: calc(100vw * 0.01);
+
+    margin: 0 0 0 0;
+
+    box-sizing: border-box;
+
+    border-top: 2px dashed #A6E1FA;
+}
+
+.pairLeft {
+    flex: 2;
+    justify-content: center;
+    align-content: center;
+}
+
+.pairLeft h4 {
+    font-family: "Darumadrop One", sans-serif;
+    font-size: medium;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    color: azure;
+    font-weight: 400;
+}
+
+.pairLeft h3 {
+    font-family: "Darumadrop One", sans-serif;
+    font-size: x-large;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    color: azure;
+    font-weight: 400;
+}
+
+.pairRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: calc(100vw * 0.02);
+}
+
+.pairRight img {
+    height: 15vh;
+    width: 15vh;
+    object-fit: contain;
+    margin: 0;
+}
+
+
+
+.quizAgain {
+    background: none;
+    font-size: small;
+    color: azure;
+    padding: 0 0 0 0;
+    width: fit-content;
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.quizAgain:hover {
+    text-decoration: underline; /* Add underline on hover */
+    background: none;
+    padding: none;
+}
