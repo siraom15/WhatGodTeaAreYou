@@ -17,10 +17,10 @@ const App = () => {
           <div className="start-page">
             <img src={theCabin} alt="The Cozy Cabin Cafe"/>
 
-            <h1>Welcome to the Cozy Cabin Café!</h1>
+            <h1>Welcome to the Cozy Cabin Cafe!</h1>
             
             <p>
-              Season’s greetings, winter traveler! Welcome to the Cozy Cabin Cafe, where each drink is made with cozy cabin care.
+              Season’s greetings, winter traveler!
               Sit back and relax while we brew something special for you!
             </p>
             <button onClick={handleStartQuiz}>Start Quiz</button>

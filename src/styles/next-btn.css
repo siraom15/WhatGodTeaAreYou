@@ -7,14 +7,16 @@
 
 .next-btn {
     background: none;
+    font-size: small;
     color: #172A3A;
-    padding: 0 0 0 0;
+    padding-top: calc(100vw * 0.015);
+    padding-bottom: calc(100vw * 0.03);
     width: fit-content;
-    cursor: pointer; /* Change cursor to pointer for better UX */
+    cursor: pointer;
 }
 
 .next-btn:hover {
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
     background: none;
     padding: none;
 }
