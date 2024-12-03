@@ -70,22 +70,22 @@ const drinks = {
   },
   "Golden Milk": { 
     image: goldenMilk, 
-    compatible: "Peppermint Mocha", 
+    compatible: "Pumpkin Spice Latte", 
     description: "You are radiant, kind-hearted, and full of positive energy. You thrive on creating warmth and comfort for others, always offering a sense of care and wisdom. Your nurturing spirit lights up any room, and your joyful outlook spreads peace and happiness wherever you go!" 
   },
   "Chai Latte": { 
     image: chaiLatte, 
-    compatible: "Hot Chocolate", 
+    compatible: "Matcha Latte", 
     description: "You are vibrant, adventurous, and always up for an exciting journey! You dive into life with energy and enthusiasm, seeking out new challenges and flavors to experience. Your fearless curiosity makes every day an adventure, and you're always ready for what comes next!" 
   },
   "Hot Chocolate": { 
     image: hotChocolate, 
-    compatible: "Matcha Latte", 
+    compatible: "Peppermint Mocha", 
     description: "You are sweet, comforting, and always a friend to turn to. You find joy in simple pleasures, like sharing cozy moments and making everyone feel special. Your kindness and warmth make you the heart of any gathering, and you love spreading smiles wherever you go!" 
   },
   "Peppermint Mocha": { 
     image: peppermintMocha, 
-    compatible: "Pumpkin Spice Latte", 
+    compatible: "Hot Chocolate", 
     description: "You are lively, energetic, and ready to make every moment unforgettable! You thrive in the hustle and bustle of the season, bringing excitement and cheer wherever you are. With your perfect mix of fun and warmth, you're always the life of the party and the spark of every celebration!" 
   },
   "Matcha Latte": { 
