@@ -10,7 +10,7 @@
     font-size: 1rem;
     color: #172A3A;
     padding-top: calc(100vw * 0.015);
-    padding-bottom: calc(100vw * 0.03);
+    padding-bottom: calc(100vw * 0.05);
     width: fit-content;
     cursor: pointer;
 }
