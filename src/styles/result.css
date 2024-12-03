@@ -28,6 +28,27 @@
 
 }
 
+.resultHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: calc(100vw * 0.02);
+    padding-bottom: calc(100vw * 0.02);
+
+    background-color: #172A3A;
+}
+
+.resultHeader h3 {
+    font-size: 1rem;
+    font-family: "Darumadrop One", sans-serif;
+    margin: 0;
+    color: #ECF8FE;
+    font-weight: 400;
+    text-align: center;
+}
+
 .resultDrink .resultRow {
     display: flex;
     flex-direction: row;
@@ -41,7 +62,7 @@
     margin-top: 0;
     margin-bottom: 0;
     padding-top: calc(100vw * 0.01);
-    font-size: xx-large;
+    font-size: 2rem;
     color: #172A3A;
 }
 
@@ -56,32 +77,8 @@
 .resultDrink p {
     padding-left: calc(100vw * 0.05);
     padding-right: calc(100vw * 0.05);
-    padding-bottom: calc(100vw * 0.03);
-}
-
-.resultHeader {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding-top: calc(100vw * 0.03);
-    padding-bottom: calc(100vw * 0.03);
-
-    background-color: #172A3A;
-}
-
-.resultHeader h3 {
-    font-size: x-large;
-    font-family: "Darumadrop One", sans-serif;
-    margin: 0;
-    color: #ECF8FE;
-    font-weight: 400;
-    text-align: center;
-}
-
-.resultDrink p {
-    font-size: 1.5vh;
+    padding-bottom: calc(100vw * 0.02);
+    font-size: 0.75rem;
     color: #172A3A;
     margin-bottom: 0;
 }
@@ -93,8 +90,8 @@
 
     width: 100%;
 
-    padding-top: calc(100vw * 0.05);
-    padding-bottom: calc(100vw * 0.05);
+    padding-top: calc(100vw * 0.02);
+    padding-bottom: calc(100vw * 0.04);
     padding-left: calc(100vw * 0.01);
     padding-right: calc(100vw * 0.01);
 
@@ -114,7 +111,7 @@
 
 .pairLeft h4 {
     font-family: "Darumadrop One", sans-serif;
-    font-size: medium;
+    font-size: 1rem;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     text-align: center;
@@ -124,7 +121,7 @@
 
 .pairLeft h3 {
     font-family: "Darumadrop One", sans-serif;
-    font-size: x-large;
+    font-size: 1.75rem;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     text-align: center;
@@ -151,7 +148,7 @@
 
 .quizAgain {
     background: none;
-    font-size: small;
+    font-size: 0.75rem;
     color: #172A3A;
     padding: 0 0 0 0;
     width: fit-content;
@@ -169,7 +166,7 @@
 
 .attribution {
     font-family: "Poppins", sans-serif;
-    font-size: x-small;
+    font-size: 0.6rem;
     color: #ECF8FE;
     width: 100%;
     display: flex;

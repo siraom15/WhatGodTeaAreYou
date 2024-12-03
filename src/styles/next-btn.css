@@ -7,7 +7,7 @@
 
 .next-btn {
     background: none;
-    font-size: small;
+    font-size: 1rem;
     color: #172A3A;
     padding-top: calc(100vw * 0.015);
     padding-bottom: calc(100vw * 0.03);
