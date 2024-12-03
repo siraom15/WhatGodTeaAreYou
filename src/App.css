@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #172A3A;
+  background-color: #ECF8FE;
 }
 
 .container {
@@ -22,7 +22,7 @@
 
   overflow-y: auto;
 
-  background-color: #172A3A;
+  background-color: #ECF8FE;
 }
 
 .start-page {
@@ -58,21 +58,22 @@ img {
 h1 {
   font-family: "Darumadrop One", sans-serif;
   font-weight: 400;
-  color:azure;
+  color:#172A3A;
   text-align: center;
   font-size: medium;
 }
 
 p {
   font-family: "Poppins", sans-serif;
-  color:azure;
+  color:#172A3A;
   text-align: center;
   font-size: x-small;
 }
 
 button {
   font-family: "Poppins", sans-serif;
-  background-color: azure;
+  color: #ECF8FE;
+  background-color: #172A3A;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -83,6 +84,6 @@ button {
 }
 
 button:hover {
-  background-color: #A6E1FA;
+  background-color: #508AB9;
   transition-duration: 30ms;
 }
