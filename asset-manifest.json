@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/cozycabincafe/static/css/main.d9f7e74e.css",
-    "main.js": "/cozycabincafe/static/js/main.e9891cc8.js",
-    "static/js/453.4913ee7a.chunk.js": "/cozycabincafe/static/js/453.4913ee7a.chunk.js",
-    "static/media/matcha-latte.png": "/cozycabincafe/static/media/matcha-latte.ef772f726bfbfd680007.png",
-    "static/media/Odysseus.jpg": "/cozycabincafe/static/media/Odysseus.c293be1f95544139b9b8.jpg",
-    "static/media/penelope.jpg": "/cozycabincafe/static/media/penelope.b15d70dae69baf50159d.jpg",
-    "static/media/Circe.jpg": "/cozycabincafe/static/media/Circe.55c23bed9480ec894d00.jpg",
-    "static/media/Nausicaa.jpg": "/cozycabincafe/static/media/Nausicaa.ec7258c48619bc9df6b0.jpg",
-    "static/media/the-cabin.png": "/cozycabincafe/static/media/the-cabin.746c8da4b01f56ac051d.png",
-    "static/media/Athena.jpg": "/cozycabincafe/static/media/Athena.651edca5cd40b04ee7d9.jpg",
-    "static/media/Telemachus.jpg": "/cozycabincafe/static/media/Telemachus.ceae90261b5468749747.jpg",
-    "index.html": "/cozycabincafe/index.html",
-    "main.d9f7e74e.css.map": "/cozycabincafe/static/css/main.d9f7e74e.css.map",
-    "main.e9891cc8.js.map": "/cozycabincafe/static/js/main.e9891cc8.js.map",
-    "453.4913ee7a.chunk.js.map": "/cozycabincafe/static/js/453.4913ee7a.chunk.js.map"
+    "main.css": "/WhatGodTeaAreYou/static/css/main.d9f7e74e.css",
+    "main.js": "/WhatGodTeaAreYou/static/js/main.c183649b.js",
+    "static/js/453.76aecf8f.chunk.js": "/WhatGodTeaAreYou/static/js/453.76aecf8f.chunk.js",
+    "static/media/matcha-latte.png": "/WhatGodTeaAreYou/static/media/matcha-latte.ef772f726bfbfd680007.png",
+    "static/media/Odysseus.jpg": "/WhatGodTeaAreYou/static/media/Odysseus.c293be1f95544139b9b8.jpg",
+    "static/media/penelope.jpg": "/WhatGodTeaAreYou/static/media/penelope.b15d70dae69baf50159d.jpg",
+    "static/media/Circe.jpg": "/WhatGodTeaAreYou/static/media/Circe.55c23bed9480ec894d00.jpg",
+    "static/media/Nausicaa.jpg": "/WhatGodTeaAreYou/static/media/Nausicaa.ec7258c48619bc9df6b0.jpg",
+    "static/media/the-cabin.png": "/WhatGodTeaAreYou/static/media/the-cabin.746c8da4b01f56ac051d.png",
+    "static/media/Athena.jpg": "/WhatGodTeaAreYou/static/media/Athena.651edca5cd40b04ee7d9.jpg",
+    "static/media/Telemachus.jpg": "/WhatGodTeaAreYou/static/media/Telemachus.ceae90261b5468749747.jpg",
+    "index.html": "/WhatGodTeaAreYou/index.html",
+    "main.d9f7e74e.css.map": "/WhatGodTeaAreYou/static/css/main.d9f7e74e.css.map",
+    "main.c183649b.js.map": "/WhatGodTeaAreYou/static/js/main.c183649b.js.map",
+    "453.76aecf8f.chunk.js.map": "/WhatGodTeaAreYou/static/js/453.76aecf8f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9f7e74e.css",
-    "static/js/main.e9891cc8.js"
+    "static/js/main.c183649b.js"
   ]
 }
