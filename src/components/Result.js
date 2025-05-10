@@ -5,11 +5,11 @@ function Result({
   drink,
   description,
   drinkImage,
-  compatibleImage,
   restartQuiz,
   name,
   godName,
   godImage,
+  godDescription,
 }) {
   return (
     <div className="borderedArea">
@@ -21,6 +21,7 @@ function Result({
         <div className="resultDrink">
           <h1>คุณเปรียบเสมือน "{godName}"</h1>
           <img src={godImage} alt={drink} />
+          <p>{godDescription}</p>
         </div>
 
         <div className="resultPair">
