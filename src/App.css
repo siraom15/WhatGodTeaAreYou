@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Itim&family=Sriracha&display=swap');
+
 .center-layout {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #ECF8FE;
+  background-color: #efedea;
   overflow-y: auto;
 }
 
@@ -21,7 +23,7 @@
   align-items: center;
   justify-content: flex-start;
 
-  background-color: #ECF8FE;
+  background-color: #efedea;
 }
 
 .start-page {
@@ -50,39 +52,57 @@
   font-style: normal;
 }
 
+.itim-regular {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gasoek-one-regular {
+  font-family: "Gasoek One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 img {
   max-height: 20vh;
 }
 
 h1 {
-  font-family: "Darumadrop One", sans-serif;
+  font-family: "Itim", cursive;
   font-weight: 400;
-  color:#172A3A;
+  color: #172a3a;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 p {
-  font-family: "Poppins", sans-serif;
-  color:#172A3A;
+  font-family: "Itim", cursive;
+  color: #172a3a;
   text-align: center;
   font-size: 1rem;
 }
 
 button {
-  font-family: "Poppins", sans-serif;
-  color: #ECF8FE;
-  background-color: #172A3A;
+  font-family: "Itim", cursive;
+  color: #ecf8fe;
+  background-color: #794c2a;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 20px;
   width: 100%;
 }
 
 button:hover {
-  background-color: #508AB9;
+  background-color: #ad6d3c;
   transition-duration: 30ms;
 }

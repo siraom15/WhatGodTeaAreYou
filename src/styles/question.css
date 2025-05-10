@@ -7,7 +7,8 @@
 }
 
 .question-page img {
-    max-width: 10vh;
+    min-width: 10vh;
+    max-width: 30vh;
 }
 
 .question-page h1 {
@@ -16,7 +17,7 @@
 }
 
 .question-page button.selected {
-    background-color: #508AB9;
+    background-color: #c5702f;
     color: #ECF8FE;
 }
   

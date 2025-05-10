@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Quiz from "./components/Quiz";
-import theCabin from './images/the-cabin.png';
-import "./App.css"
+import theCabin from "./images/the-cabin.png";
+import "./App.css";
 
 const App = () => {
   const [showStartPage, setShowStartPage] = useState(true);
@@ -14,19 +14,19 @@ const App = () => {
     <div className="center-layout">
       <div className="container">
         {showStartPage ? (
-          <div className="start-page">
-            <img src={theCabin} alt="The Cozy Cabin Cafe"/>
+          <div className="start-page itim-regular">
+            <img src={theCabin} height={800}  alt="The Cozy Cabin Cafe" />
 
-            <h1>Welcome to the Cozy Cabin Cafe!</h1>
-            
+            <h1>ถ้าคุณอยู่ใน The Odyssey... คุณคือ "ชา" แบบไหน?</h1>
+
             <p>
-              Season’s greetings, winter traveler!
-              Sit back and relax while we brew something special for you!
+              คำแนะนำ:
+              เลือกตัวเลือกที่ตรงกับความรู้สึกหรือพฤติกรรมของคุณมากที่สุด
             </p>
-            <button onClick={handleStartQuiz}>Start Quiz</button>
+            <button onClick={handleStartQuiz}>เริ่มกันเลย !</button>
           </div>
         ) : (
-          <Quiz />
+          <Quiz onRestart={() => setShowStartPage(true)} />
         )}
       </div>
     </div>

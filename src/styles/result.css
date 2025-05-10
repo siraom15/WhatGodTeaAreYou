@@ -1,185 +1,181 @@
 .borderedArea {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
 }
 
 .resultContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    width: 100%;
-    border: 2px dashed #172A3A;
-    box-sizing: border-box;
+  width: 100%;
+  border: 2px dashed #794c2a;
+  box-sizing: border-box;
 }
 
 .resultDrink {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-    padding-top: calc(100vw * 0.01);
-    padding-bottom: calc(100vw * 0.03);
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  padding-top: calc(100vw * 0.01);
+  padding-bottom: calc(100vw * 0.03);
 }
 
 .resultHeader {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding-top: calc(100vw * 0.02);
-    padding-bottom: calc(100vw * 0.02);
+  padding-top: calc(100vw * 0.02);
+  padding-bottom: calc(100vw * 0.02);
 
-    background-color: #172A3A;
+  background-color: #794c2a;
 }
 
 .resultHeader h3 {
-    font-size: 1rem;
-    font-family: "Darumadrop One", sans-serif;
-    margin: 0;
-    color: #ECF8FE;
-    font-weight: 400;
-    text-align: center;
+  font-size: 1rem;
+  font-family: "Itim", cursive;
+  margin: 0;
+  color: #ecf8fe;
+  font-weight: 400;
+  text-align: center;
 }
 
 .resultDrink .resultRow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: calc(100vw * 0.008);
-    padding-left: calc(100vw * 0.02);
-    padding-right: calc(100vw * 0.02);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: calc(100vw * 0.008);
+  padding-left: calc(100vw * 0.02);
+  padding-right: calc(100vw * 0.02);
 }
 
 .resultDrink h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: calc(100vw * 0.01);
-    font-size: 2rem;
-    color: #172A3A;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: calc(100vw * 0.01);
+  font-size: 2rem;
+  color: #794c2a;
 }
 
 .resultDrink img {
-    padding-top: calc(100vw * 0.03);
-    height: 20vh;
-    width: 20vh;
-    object-fit: contain;
-    margin: 0;
+  padding-top: calc(100vw * 0.03);
+  height: 30vh;
+  width: 30vh;
+  object-fit: cover;
+  margin: 0;
 }
 
 .resultDrink p {
-    padding-left: calc(100vw * 0.05);
-    padding-right: calc(100vw * 0.05);
-    padding-bottom: calc(100vw * 0.02);
-    font-size: 0.75rem;
-    color: #172A3A;
-    margin-bottom: 0;
+  padding-left: calc(100vw * 0.05);
+  padding-right: calc(100vw * 0.05);
+  padding-bottom: calc(100vw * 0.02);
+  font-size: 1rem;
+  color: #794c2a;
+  margin-bottom: 0;
 }
 
 .resultPair {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
+  width: 100%;
 
-    width: 100%;
+  padding-top: calc(100vw * 0.02);
+  padding-bottom: calc(100vw * 0.04);
+  padding-left: calc(100vw * 0.01);
+  padding-right: calc(100vw * 0.01);
 
-    padding-top: calc(100vw * 0.02);
-    padding-bottom: calc(100vw * 0.04);
-    padding-left: calc(100vw * 0.01);
-    padding-right: calc(100vw * 0.01);
+  margin: 0 0 0 0;
 
-    margin: 0 0 0 0;
+  box-sizing: border-box;
 
-    box-sizing: border-box;
-
-    border-top: 2px dashed #172A3A;
+  border-top: 2px dashed #172a3a;
 }
 
 .pairLeft {
-    padding-left: calc(100vw * 0.004);
-    flex: 2;
-    justify-content: center;
-    align-content: center;
+  padding-left: calc(100vw * 0.004);
+  flex: 2;
+  justify-content: center;
+  align-content: center;
 }
 
 .pairLeft h4 {
-    font-family: "Darumadrop One", sans-serif;
-    font-size: 1rem;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    text-align: center;
-    color: #172A3A;
-    font-weight: 400;
+  font-family: "Itim", cursive;
+  font-size: 1rem;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-align: center;
+  color: #172a3a;
+  font-weight: 400;
 }
 
 .pairLeft h3 {
-    font-family: "Darumadrop One", sans-serif;
-    font-size: 1.75rem;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    text-align: center;
-    color: #172A3A;
-    font-weight: 400;
+  font-family: "Itim", cursive;
+  font-size: 1.75rem;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-align: center;
+  color: #172a3a;
+  font-weight: 400;
 }
 
 .pairRight {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: calc(100vw * 0.02);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: calc(100vw * 0.02);
 }
 
 .pairRight img {
-    height: 15vh;
-    width: 15vh;
-    object-fit: contain;
-    margin: 0;
+  height: 15vh;
+  width: 15vh;
+  object-fit: contain;
+  margin: 0;
 }
 
-
-
 .quizAgain {
-    background: none;
-    font-size: 0.75rem;
-    color: #172A3A;
-    padding: 0 0 0 0;
-    width: fit-content;
-    cursor: pointer;
+  background: none;
+  font-size: 0.75rem;
+  color: #172a3a;
+  padding: 0 0 0 0;
+  width: fit-content;
+  cursor: pointer;
 
-    padding-top: calc(100vw * 0.015);
-    padding-bottom: calc(100vw * 0.03);
+  padding-top: calc(100vw * 0.015);
+  padding-bottom: calc(100vw * 0.03);
 }
 
 .quizAgain:hover {
-    text-decoration: underline;
-    background: none;
-    padding: none;
+  text-decoration: underline;
+  background: none;
+  padding: none;
 }
 
 .attribution {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.6rem;
-    color: #ECF8FE;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: "Itim", cursive;
+  font-size: 0.6rem;
+  color: #ecf8fe;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding-top: calc(100vw * 0.03);
-    padding-bottom: calc(100vw * 0.03);
+  padding-top: calc(100vw * 0.03);
+  padding-bottom: calc(100vw * 0.03);
 
-    background-color: #172A3A;
+  background-color: #794c2a;
 }
 
 .attribution a {
-    color: #ECF8FE;
-    text-decoration: none;
+  color: #ecf8fe;
+  text-decoration: none;
 }
