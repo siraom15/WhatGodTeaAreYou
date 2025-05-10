@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WhatGodTeaAreYou/static/css/main.d9f7e74e.css",
-    "main.js": "/WhatGodTeaAreYou/static/js/main.c183649b.js",
+    "main.js": "/WhatGodTeaAreYou/static/js/main.5d9682c5.js",
     "static/js/453.76aecf8f.chunk.js": "/WhatGodTeaAreYou/static/js/453.76aecf8f.chunk.js",
     "static/media/matcha-latte.png": "/WhatGodTeaAreYou/static/media/matcha-latte.ef772f726bfbfd680007.png",
     "static/media/Odysseus.jpg": "/WhatGodTeaAreYou/static/media/Odysseus.c293be1f95544139b9b8.jpg",
@@ -13,11 +13,11 @@
     "static/media/Telemachus.jpg": "/WhatGodTeaAreYou/static/media/Telemachus.ceae90261b5468749747.jpg",
     "index.html": "/WhatGodTeaAreYou/index.html",
     "main.d9f7e74e.css.map": "/WhatGodTeaAreYou/static/css/main.d9f7e74e.css.map",
-    "main.c183649b.js.map": "/WhatGodTeaAreYou/static/js/main.c183649b.js.map",
+    "main.5d9682c5.js.map": "/WhatGodTeaAreYou/static/js/main.5d9682c5.js.map",
     "453.76aecf8f.chunk.js.map": "/WhatGodTeaAreYou/static/js/453.76aecf8f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9f7e74e.css",
-    "static/js/main.c183649b.js"
+    "static/js/main.5d9682c5.js"
   ]
 }
