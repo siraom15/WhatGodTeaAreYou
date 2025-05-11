@@ -10,6 +10,7 @@ function Result({
   godName,
   godImage,
   godDescription,
+  teaImage,
 }) {
   return (
     <div className="borderedArea">
@@ -31,7 +32,7 @@ function Result({
             <p>{description}</p>
           </div>
           <div className="pairRight">
-            <img src={drinkImage} alt={drink} />
+            <img src={teaImage} alt={drink} />
           </div>
         </div>
       </div>
