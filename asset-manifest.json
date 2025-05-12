@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.css": "/WhatGodTeaAreYou/static/css/main.fe4182a1.css",
-    "main.js": "/WhatGodTeaAreYou/static/js/main.8a89f5be.js",
+    "main.css": "/WhatGodTeaAreYou/static/css/main.39792103.css",
+    "main.js": "/WhatGodTeaAreYou/static/js/main.c31a6a44.js",
     "static/js/453.76aecf8f.chunk.js": "/WhatGodTeaAreYou/static/js/453.76aecf8f.chunk.js",
-    "static/media/matcha-latte.png": "/WhatGodTeaAreYou/static/media/matcha-latte.ef772f726bfbfd680007.png",
+    "static/media/lavender.png": "/WhatGodTeaAreYou/static/media/lavender.cc9d54b75cd679546321.png",
     "static/media/baitoey.png": "/WhatGodTeaAreYou/static/media/baitoey.0849e13437ac989f382e.png",
     "static/media/aunchun.png": "/WhatGodTeaAreYou/static/media/aunchun.1b521900a7179b041a99.png",
     "static/media/rose.png": "/WhatGodTeaAreYou/static/media/rose.89e820584caf3b99491a.png",
     "static/media/kajiab.png": "/WhatGodTeaAreYou/static/media/kajiab.06c352f79a1335e3751d.png",
+    "static/media/kekkuy.png": "/WhatGodTeaAreYou/static/media/kekkuy.2856bd246e12ddd6814e.png",
     "static/media/orange.png": "/WhatGodTeaAreYou/static/media/orange.27f4ea3dd8e804024067.png",
     "static/media/lemo.png": "/WhatGodTeaAreYou/static/media/lemo.728578212fd05bfc7e04.png",
-    "static/media/Odysseus.jpg": "/WhatGodTeaAreYou/static/media/Odysseus.c293be1f95544139b9b8.jpg",
-    "static/media/penelope.jpg": "/WhatGodTeaAreYou/static/media/penelope.b15d70dae69baf50159d.jpg",
-    "static/media/Circe.jpg": "/WhatGodTeaAreYou/static/media/Circe.55c23bed9480ec894d00.jpg",
-    "static/media/Nausicaa.jpg": "/WhatGodTeaAreYou/static/media/Nausicaa.ec7258c48619bc9df6b0.jpg",
-    "static/media/Athena.jpg": "/WhatGodTeaAreYou/static/media/Athena.651edca5cd40b04ee7d9.jpg",
+    "static/media/Perseus.jpg": "/WhatGodTeaAreYou/static/media/Perseus.8f92288c0352c2330234.jpg",
+    "static/media/Hermes.jpg": "/WhatGodTeaAreYou/static/media/Hermes.8df1cb30b45a87cdf769.jpg",
+    "static/media/Achilles.jpg": "/WhatGodTeaAreYou/static/media/Achilles.56a7b6c81d42d924435e.jpg",
+    "static/media/Circe.jpg": "/WhatGodTeaAreYou/static/media/Circe.3f7e6919ba29c779fc11.jpg",
+    "static/media/Hercules.jpg": "/WhatGodTeaAreYou/static/media/Hercules.ccbcab01f3380b00fbc7.jpg",
+    "static/media/Cassandra.jpg": "/WhatGodTeaAreYou/static/media/Cassandra.ab36df67d638715a61c6.jpg",
+    "static/media/Apollo.jpg": "/WhatGodTeaAreYou/static/media/Apollo.c265d45b55a5270d2d83.jpg",
     "static/media/the-cabin.png": "/WhatGodTeaAreYou/static/media/the-cabin.abe8cc09dc2cd9747a45.png",
-    "static/media/Telemachus.jpg": "/WhatGodTeaAreYou/static/media/Telemachus.ceae90261b5468749747.jpg",
+    "static/media/Persephone.jpg": "/WhatGodTeaAreYou/static/media/Persephone.6510ca8c4744bb12e7f3.jpg",
     "index.html": "/WhatGodTeaAreYou/index.html",
-    "main.fe4182a1.css.map": "/WhatGodTeaAreYou/static/css/main.fe4182a1.css.map",
-    "main.8a89f5be.js.map": "/WhatGodTeaAreYou/static/js/main.8a89f5be.js.map",
+    "main.39792103.css.map": "/WhatGodTeaAreYou/static/css/main.39792103.css.map",
+    "main.c31a6a44.js.map": "/WhatGodTeaAreYou/static/js/main.c31a6a44.js.map",
     "453.76aecf8f.chunk.js.map": "/WhatGodTeaAreYou/static/js/453.76aecf8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe4182a1.css",
-    "static/js/main.8a89f5be.js"
+    "static/css/main.39792103.css",
+    "static/js/main.c31a6a44.js"
   ]
 }
