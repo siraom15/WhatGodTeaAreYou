@@ -1,6 +1,6 @@
 export const translations = {
   th: {
-    title: "ถ้าคุณอยู่ใน The Odyssey... คุณคือ \"ชา\" แบบไหน?",
+    title: "\"ชา\"แห่งเทพเจ้า: ค้นหารสชาที่เป็นตัวคุณ",
     instructions: "คำแนะนำ: เลือกตัวเลือกที่ตรงกับความรู้สึกหรือพฤติกรรมของคุณมากที่สุด",
     startButton: "เริ่มกันเลย !",
     restartButton: "เริ่มใหม่",
@@ -13,7 +13,7 @@ export const translations = {
     retest: "ทำแบบทดสอบอีกครั้ง",
   },
   en: {
-    title: "If you were in The Odyssey... what kind of \"tea\" would you be?",
+    title: "Discover Your \"Tea Soul\" in the World of Myths",
     instructions: "Instructions: Choose the option that best matches your feelings or behavior",
     startButton: "Let's Start!",
     restartButton: "Start Over",
