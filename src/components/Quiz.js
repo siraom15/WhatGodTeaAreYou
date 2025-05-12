@@ -1,157 +1,405 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Question from "./Question";
 import Result from "./Result";
 
 import "../styles/next-btn.css";
 
-import A from "../images/Odysseus.jpg";
-import B from "../images/penelope.jpg";
-import C from "../images/Nausicaa.jpg";
-import D from "../images/Athena.jpg";
-import E from "../images/Circe.jpg";
-import F from "../images/Telemachus.jpg";
-import MatchLatte from "../images/matcha-latte.png";
+import Achilles from "../images/Achilles.jpg";
+import Apollo from "../images/Apollo.jpg";
+import Cassandra from "../images/Cassandra.jpg";
+import Circe from "../images/Circe.jpg";
+import Hercules from "../images/Hercules.jpg";
+import Hermes from "../images/Hermes.jpg";
+import Persephone from "../images/Persephone.jpg";
+import Perseus from "../images/Perseus.jpg";
 
 // Tea images
-import Aun from "../images/aunchun.png";
-import Bai from "../images/baitoey.png";
-import Ka from "../images/kajiab.png";
-import Lem from "../images/lemo.png";
-import Ora from "../images/orange.png";
-import Ros from "../images/rose.png";
+import Aunchun from "../images/aunchun.png";
+import Baitoey from "../images/baitoey.png";
+import Kajiab from "../images/kajiab.png";
+import Lemon from "../images/lemo.png";
+import Orange from "../images/orange.png";
+import Rose from "../images/rose.png";
+import Kekkuy from "../images/kekkuy.png";
+import Lavender from "../images/lavender.png";
+import { getText } from "../translations";
 
 const questions = [
   {
-    question: "คุณเริ่มต้นวันใหม่อย่างไร?",
+    questionTH: "ถ้าคุณมีเวลาว่าง 1 วัน คุณจะ...",
+    questionEng: "On your day off, you would rather...",
     options: [
-      { text: "ลุกขึ้นพร้อมวางแผนเต็มหัว", drink: "A" },
-      { text: "ค่อย ๆ ทำทุกอย่างด้วยจังหวะที่มั่นคง", drink: "B" },
-      { text: "รีบออกไปสัมผัสแสงแดด หาแรงบันดาลใจ", drink: "C" },
+      {
+        textTH: "เดินทางออกนอกกรอบ สัมผัสสิ่งใหม่",
+        textEng: "Go somewhere new and exciting",
+        drink: "A",
+      },
+      {
+        textTH: "ใช้เวลานั่งคิด เขียน หรืออยู่กับความคิดตัวเอง",
+        textEng: "Stay in and reflect quietly",
+        drink: "B",
+      },
+      {
+        textTH: "ฝึกฝนร่างกาย หรือทำสิ่งที่ท้าทายตัวเอง",
+        textEng: "Do something bold or physical",
+        drink: "C",
+      },
+      {
+        textTH: "สร้างหรือทดลองอะไรลึกลับ น่าค้นหา",
+        textEng: "Try something magical or creative",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "เมื่อเจอปัญหายาก ๆ คุณ...",
+    questionTH: "ถ้ามีใครเข้าใจคุณผิด คุณจะ...",
+    questionEng: "When someone misunderstands you, you...",
     options: [
-      { text: "ใช้ไหวพริบแก้ปัญหา หาทางออกหลายทาง", drink: "A" },
-      { text: "เชื่อในความอดทนและความดี", drink: "B" },
-      { text: "ปรับตัวไว พยายามทำให้ทุกคนรู้สึกดี", drink: "C" },
+      {
+        textTH: "พูดคุยตรง ๆ และเคลียร์ให้เข้าใจ",
+        textEng: "Talk it out clearly and directly",
+        drink: "A",
+      },
+      {
+        textTH: "ยอมรับอย่างเงียบ ๆ แม้ไม่มีใครฟัง",
+        textEng: "Stay quiet and hope they’ll understand one day",
+        drink: "B",
+      },
+      {
+        textTH: "แสดงออกผ่านการกระทำมากกว่าคำพูด",
+        textEng: "Show your actions instead of explaining",
+        drink: "C",
+      },
+      {
+        textTH: "ยิ้มไว้และปล่อยให้เวลาเป็นคำตอบ",
+        textEng: "Smile and let time reveal the truth",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "ถ้าได้เดินทางไกล คุณอยากเป็นคนแบบไหนในกลุ่ม?",
+    questionTH: "ในกลุ่มเพื่อน คุณมักเป็นคนที่...",
+    questionEng: "In your friend group, you are usually the one who...",
     options: [
-      { text: "ผู้นำ มีแผน ลุยได้ทุกสถานการณ์", drink: "A" },
-      { text: "คนที่คอยดูแลทุกคนให้ปลอดภัย", drink: "B" },
-      { text: "คนที่ทำให้บรรยากาศสดใสและเบิกบาน", drink: "C" },
+      {
+        textTH: "ชวนคุย ชวนขำ ทำให้วงไม่กร่อย",
+        textEng: "Keeps the vibe fun and talks to everyone",
+        drink: "A",
+      },
+      {
+        textTH: "สังเกตทุกคนเงียบ ๆ แล้วเข้าใจลึกที่สุด",
+        textEng: "Watches and listens carefully",
+        drink: "B",
+      },
+      {
+        textTH: "พร้อมลุย เป็นคนเริ่มก่อนทุกกิจกรรม",
+        textEng: "Takes the lead and starts things",
+        drink: "C",
+      },
+      {
+        textTH: "ดูนิ่ง ๆ แต่มีเสน่ห์จนคนเข้าหาเอง",
+        textEng: "Is quiet but somehow everyone notices",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "เมื่อมีคนที่คุณรักต้องเจอเรื่องหนักใจ คุณจะ...",
+    questionTH: "เวลามีความเครียด คุณจัดการอย่างไร?",
+    questionEng: "When you feel stressed, you...",
     options: [
-      { text: "พยายามหาวิธีช่วยเขาให้รอด", drink: "A" },
-      { text: "อยู่เคียงข้างอย่างเงียบ ๆ พร้อมสนับสนุนเสมอ", drink: "B" },
-      { text: "ดึงเขาออกไปสู่อะไรสดใหม่ให้ลืมความเครียด", drink: "C" },
+      {
+        textTH: "หาทางออกหรือมุมมองใหม่ ๆ ทันที",
+        textEng: "Try to find a new perspective",
+        drink: "A",
+      },
+      {
+        textTH: "อยู่กับมันและยอมรับให้ผ่านไปเอง",
+        textEng: "Accept it and let it pass",
+        drink: "B",
+      },
+      {
+        textTH: "ทำอะไรบางอย่างให้เหงื่อออกหรือใจเต้น",
+        textEng: "Work out or move your body",
+        drink: "C",
+      },
+      {
+        textTH: "เขียน วาด ฟังเพลง หรือทำอะไรคนเดียว",
+        textEng: "Write, draw, or listen to music",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "คุณให้ความสำคัญกับสิ่งใดมากที่สุด?",
+    questionTH: "ถ้าให้เลือกอาวุธประจำตัว คุณจะเลือก...",
+    questionEng: "If you could pick a magical item, you'd choose...",
     options: [
-      { text: "ปัญญาและไหวพริบ", drink: "A" },
-      { text: "ความซื่อสัตย์และความรัก", drink: "B" },
-      { text: "อิสระและความสุขในปัจจุบัน", drink: "C" },
+      {
+        textTH: "ปีกติดส้นเท้า – เดินทางรวดเร็ว ทันทุกสถานการณ์",
+        textEng: "Winged sandals – move fast, go far",
+        drink: "A",
+      },
+      {
+        textTH: "หนังสือหรือคทาทำนาย – พลังแห่งการหยั่งรู้",
+        textEng: "A prophecy scroll – know things others don’t",
+        drink: "B",
+      },
+      {
+        textTH: "ดาบหรือโล่ – ปกป้องและต่อสู้",
+        textEng: "A sword or shield – protect what matters",
+        drink: "C",
+      },
+      {
+        textTH: "ขวดน้ำยาเวท – เสน่ห์ที่เปลี่ยนโลกได้",
+        textEng: "A charm potion – win hearts with a glance",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "ถ้ามีโอกาสเลือกบทบาทในเรื่องราว คุณอยากเป็น...",
+    questionTH: "คุณอยากให้คนอื่นจำคุณว่าเป็นคนแบบไหน?",
+    questionEng: "How do you want people to remember you?",
     options: [
-      { text: "วีรบุรุษผู้เดินทาง", drink: "A" },
-      { text: "คนที่ทุกคนกลับมาหา", drink: "B" },
-      { text: "คนที่ช่วยให้ผู้อื่นเปล่งประกาย", drink: "C" },
+      {
+        textTH: "พูดเก่ง ฉลาด แก้ปัญหาเก่ง",
+        textEng: "Clever and quick with words",
+        drink: "A",
+      },
+      {
+        textTH: "ลึกซึ้ง มีความคิดเป็นของตัวเอง",
+        textEng: "Deep and thoughtful",
+        drink: "B",
+      },
+      {
+        textTH: "มั่นใจ กล้าหาญ นำคนได้",
+        textEng: "Brave and determined",
+        drink: "C",
+      },
+      {
+        textTH: "รีน่าค้นหา มีเสน่ห์ในแบบของตัวเอง",
+        textEng: "Mysterious and magnetic",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "เมื่อเจอสถานการณ์ล่อแหลม คุณ...",
+    questionTH: "ถ้ามีเวทมนตร์ได้ 1 อย่าง คุณจะเลือก...",
+    questionEng: "If you had one magical power, it would be...",
     options: [
-      { text: "ประเมินสถานการณ์ก่อนลงมือ", drink: "A" },
-      { text: "ฟังหัวใจและคุณธรรม", drink: "B" },
-      { text: "ใช้เสน่ห์และท่าทีอ่อนโยนจัดการ", drink: "C" },
+      {
+        textTH: "พูดได้ทุกภาษาในโลก",
+        textEng: "Speak all languages",
+        drink: "A",
+      },
+      { textTH: "มองเห็นอนาคต", textEng: "See the future", drink: "B" },
+      {
+        textTH: "มีพละกำลังไร้ขีดจำกัด",
+        textEng: "Endless strength",
+        drink: "C",
+      },
+      {
+        textTH: "ทำให้คนตกหลุมรักด้วยคำพูดเดียว",
+        textEng: "Make people fall under your spell",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "เวลาโกรธหรือผิดหวัง คุณมักจะ...",
+    questionTH: "เวลาอยู่กับคนหมู่มาก คุณมักจะ...",
+    questionEng: "In a crowd, you tend to...",
     options: [
-      { text: "คิดก่อนแสดงออก ควบคุมตัวเอง", drink: "A" },
-      { text: "เงียบและเก็บไว้", drink: "B" },
-      { text: "ปล่อยผ่านไว ยิ้มแล้วเดินต่อ", drink: "C" },
+      {
+        textTH: "เป็นคนที่พูดเก่ง ช่วยเชื่อมบทสนทนา",
+        textEng: "Start conversations and bring people together",
+        drink: "A",
+      },
+      {
+        textTH: "เงียบ ๆ แต่สังเกตได้ทุกอย่าง",
+        textEng: "Stay quiet but notice everything",
+        drink: "B",
+      },
+      {
+        textTH: "เป็นศูนย์กลางพลังบวก หรือพลังรบ",
+        textEng: "Energize everyone or take charge",
+        drink: "C",
+      },
+      {
+        textTH: "ดึงดูดโดยที่ไม่ต้องพยายาม",
+        textEng: "Attract attention without trying",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "เมื่อคุณรู้สึกเหนื่อยล้า คุณต้องการ...",
+    questionTH: "สิ่งสำคัญที่สุดในชีวิตคุณคือ...",
+    questionEng: "What matters most in life?",
     options: [
-      { text: "เวลาเงียบ ๆ ทบทวนตัวเอง", drink: "A" },
-      { text: "คนที่เข้าใจมาอยู่ข้าง ๆ", drink: "B" },
-      { text: "อากาศสดชื่น ทะเล หรือแสงแดด", drink: "C" },
+      {
+        textTH: "เสรีภาพและการสื่อสาร",
+        textEng: "Freedom and expression",
+        drink: "A",
+      },
+      {
+        textTH: "ความจริง ความรู้ และการเข้าใจตนเอง",
+        textEng: "Truth and self-understanding",
+        drink: "B",
+      },
+      {
+        textTH: "ความกล้า ความสำเร็จ",
+        textEng: "Courage and achievement",
+        drink: "C",
+      },
+      {
+        textTH: "ความงาม ความลุ่มลึก และอารมณ์",
+        textEng: "Beauty and feeling",
+        drink: "D",
+      },
     ],
   },
   {
-    question: "คุณคิดว่าความสำเร็จในชีวิตคืออะไร?",
+    questionTH: "ชีวิตในฝันของคุณคือ...",
+    questionEng: "Your dream life would be...",
     options: [
-      { text: "การเอาชนะอุปสรรคด้วยมันสมอง", drink: "A" },
-      { text: "ความสัมพันธ์มั่นคงและการได้กลับบ้าน", drink: "B" },
-      { text: "การมีชีวิตที่เบิกบานและช่วยคนอื่นได้", drink: "C" },
+      {
+        textTH: "ได้เดินทาง ไม่มีกรอบ ไม่มีวันหยุด",
+        textEng: "Traveling without limits",
+        drink: "A",
+      },
+      {
+        textTH: "ได้มีเวลาคิด เรียนรู้ และเติบโต",
+        textEng: "Growing through calm and wisdom",
+        drink: "B",
+      },
+      {
+        textTH: "ได้ต่อสู้เพื่อเป้าหมายในชีวิต",
+        textEng: "Facing challenges and conquering goals",
+        drink: "C",
+      },
+      {
+        textTH: "ได้ใช้ชีวิตอย่างสร้างสรรค์ เต็มไปด้วยแรงดึงดูด",
+        textEng: "Living with mystery, creativity, and charm",
+        drink: "D",
+      },
     ],
   },
 ];
 
 const drinks = {
   A: {
-    name: "✨ ชาอัญชัน",
-    description:
-      "คุณคือผู้ใช้ปัญญา มีความลึกซึ้ง ช่างสังเกต และไม่หยุดอยู่กับที่",
-    image: A,
-    tea_image: Aun,
-    god_name: "Odysseus",
-    god_description: "ชายผู้มีความคิดวิเคราะห์ดีเยี่ยม ไม่ยอมแพ้ต่ออุปสรรค ใช้ไหวพริบเอาตัวรอดจากสถานการณ์ต่าง ๆ เป็นตัวแทนของ “ความเพียร” และ “ความเฉลียวฉลาด”"
+    nameTH: "🍋 ชาเลมอน",
+    nameEng: "🍋 Lemon",
+    descriptionTH:
+      "คุณคือคนที่ชอบเคลื่อนไหวตลอดเวลา ฉลาดว่องไว ชอบความอิสระและการเชื่อมต่อกับผู้คน",
+    descriptionEng:
+      "You’re fast-thinking, witty, and love freedom. You enjoy movement, communication, and new adventures.",
+    tea_image: Lemon,
+    image: Hermes,
+    god_name: "Hermes",
+    god_descriptionTH:
+      "เทพแห่งการเดินทางและการสื่อสาร ผู้เฉลียวฉลาด ว่องไว และมีเสน่ห์แบบขี้เล่น เป็นตัวแทนของอิสระ ความคิดเร็ว และความกล้าลอง",
+    god_descriptionEng:
+      "The god of travel and communication — quick-witted, swift, and playfully charming. He represents freedom, fast thinking, and the courage to explore.",
   },
   B: {
-    name: "🌼 ชาใบเตย",
-    description: "คุณคือหัวใจของบ้าน มีความรักมั่นคง และอดทนต่อสิ่งยากลำบาก",
-    image: B,
-    tea_image: Bai,
-    god_name: "Penelope",
-    god_description: "หญิงที่มีความจงรักภักดี อดทน และมั่นคงในความรู้สึก เป็นตัวแทนของความมั่นใจในตนเอง ความเข้มแข็งทางใจ และศรัทธาในความรัก"
+    nameTH: "💜 ชาลาเวนเดอร์",
+    nameEng: "💜 Lavender",
+    descriptionTH:
+      "คุณเป็นผู้หยั่งรู้ เงียบลึก น่าค้นหา เข้าใจความเปลี่ยนแปลงและยอมรับได้เสมอ",
+    descriptionEng:
+      "You’re deep, quiet, and wise beyond your years. People may not always listen, but you're often right.",
+    image: Cassandra,
+    tea_image: Lavender,
+    god_name: "Cassandra",
+    god_descriptionTH:
+      "ผู้หยั่งรู้อนาคตแต่ไม่มีใครเชื่อ เป็นหญิงที่มั่นคงในความคิด ลึกซึ้ง และโดดเดี่ยวในบางครั้ง สื่อถึงสัญชาตญาณและความจริงที่ซ่อนอยู่",
+    god_descriptionEng:
+      "A prophetess cursed to be unheard. Deep, steady, and at times solitary, she reflects instinct, truth, and quiet resilience.",
   },
   C: {
-    name: "🍊 ชาส้มฝาน",
-    description: "คุณคือความสดใสในโลกใบนี้ เต็มไปด้วยพลังเยียวยาและเปิดใจ",
-    image: C,
-    tea_image: Ora,
-    god_name: "Nausicaa",
-    god_description: "หญิงสาวที่มีเมตตาและความสง่างาม มักถูกมองว่าเป็นแบบอย่างของความมีน้ำใจ ความกล้าหาญ และมารยาทอ่อนโยน เธอเป็นตัวแทนของ “การต้อนรับอย่างมีเกียรติ"
+    nameTH: "🌺 ชากระเจี๊ยบ",
+    nameEng: "🌺 Hibiscus",
+    descriptionTH: "คุณแข็งแกร่ง มั่นคง มีพลังและพร้อมลุยเพื่อสิ่งที่เชื่อ",
+    descriptionEng:
+      "You are fierce, determined, and passionate. A true fighter with a heart full of fire.",
+    image: Achilles,
+    tea_image: Kajiab,
+    god_name: "Achilles",
+    god_descriptionTH:
+      "ยอดนักรบผู้ไม่กลัวความตาย มีจิตใจเร่าร้อน จริงจัง และเต็มไปด้วยพลังดิบ สื่อถึงความกล้าหาญ ปกป้อง และความรักที่แรงกล้า",
+    god_descriptionEng:
+      "A fearless warrior with a fiery soul. Passionate and intense, he represents bravery, protection, and fierce love.",
+  },
+  D: {
+    nameTH: "🌹 ชากุหลาบ",
+    nameEng: "🌹 Rose",
+    descriptionTH:
+      "คุณมีเสน่ห์แบบไม่ต้องพยายาม สร้างพลังผ่านความงาม ความลึกลับ และความมั่นใจ",
+    descriptionEng:
+      "You’re enchanting, artistic, and mysterious. You turn quiet power into beauty and influence.",
+    image: Circe,
+    tea_image: Rose,
+    god_name: "Circe",
+    god_descriptionTH:
+      "แม่มดผู้มากเสน่ห์และเปี่ยมอำนาจ มีความลึกลับ ดึงดูด และควบคุมสถานการณ์ด้วยสติปัญญา เป็นตัวแทนของพลังอ่อนโยนที่ควบคุมได้",
+    god_descriptionEng:
+      "A sorceress of beauty and power. Mysterious and magnetic, she controls her world with calm intelligence and soft strength.",
   },
   "A+B": {
-    name: "🍋 ชาเลม่อน",
-    description: "คุณฉลาดแต่มีจิตใจอ่อนโยน พร้อมช่วยเหลือเสมอ",
-    image: D,
-    tea_image: Lem,
-    god_name: "Athena",
-    god_description: "เทพีที่เป็นสัญลักษณ์ของสติปัญญา ความยุติธรรม และการวางแผน เป็นตัวแทนของความฉลาดหลักแหลมและการแก้ปัญหาด้วยเหตุผล ไม่ใช่อารมณ์"
-  },
-  "A+C": {
-    name: "🌹 ชากุหลาบ",
-    description: "คุณลึกลับ มีเสน่ห์ และดึงดูดคนรอบข้าง",
-    image: E,
-    tea_image: Ros,
-    god_name: "Circe",
-    god_description: "หญิงสาวผู้มีพลังเวทมนตร์ สามารถควบคุมธรรมชาติและเปลี่ยนรูปร่างของสิ่งมีชีวิตได้ มักถูกมองว่าเป็นตัวแทนของความลึกลับ เย้ายวน และอำนาจเหนือธรรมชาติที่ผูกโยงกับธรรมชาติและพลังเพศหญิง"
+    nameTH: "🌞 ชาเก็กฮวย",
+    nameEng: "🌞 Chrysanthemum",
+    descriptionTH: "คุณคือแสงสว่างที่เต็มไปด้วยปัญญาและความอ่อนโยน",
+    descriptionEng: "You shine with both intelligence and kindness.",
+    image: Apollo,
+    tea_image: Kekkuy,
+    god_name: "Apollo",
+    god_descriptionTH:
+      "เทพแห่งแสง องค์ความรู้ และดนตรี เป็นคนสุขุม มีพลังสงบแต่ส่องสว่าง สื่อถึงความสมดุลระหว่างเหตุผลกับความงาม",
+    god_descriptionEng:
+      "The god of light, wisdom, and music. Calm and radiant, he embodies the harmony between logic and beauty.",
   },
   "B+C": {
-    name: "🌺 ชากระเจี๊ยบ",
-    description: "คุณมีจิตใจดี เติบโตไว และเต็มไปด้วยพลังของคนรุ่นใหม่",
-    image: F,
-    tea_image: Ka,
-    god_name: "Telemachus",
-    god_description: "ชายหนุ่มที่อยู่ในช่วงการเติบโต เขาเป็นภาพแทนของ “การเปลี่ยนผ่าน” จากวัยเยาว์ไปสู่วุฒิภาวะ และการแสวงหาความหมายของชีวิตและตนเอง"
+    nameTH: "💙 ชาอัญชัน",
+    nameEng: "💙 Butterfly Pea",
+    descriptionTH:
+      "คุณเป็นคนที่มีความเข้มแข็ง สามารถรับมือกับการเปลี่ยนแปลงได้ดี และมีความเปล่งประกายในแบบของตัวเอง",
+    descriptionEng:
+      "You have inner strength, embrace change with grace, and radiate in your own way.",
+    image: Persephone,
+    tea_image: Aunchun,
+    god_name: "Persephone",
+    god_descriptionTH:
+      "ราชินีแห่งโลกใต้พิภพและเทพแห่งฤดูใบไม้ผลิ มีสองด้านทั้งความบริสุทธิ์และความลึกซึ้ง สื่อถึงการเติบโต ความเปลี่ยนแปลง และความเข้มแข็งในใจ",
+    god_descriptionEng:
+      "Queen of the underworld and goddess of spring. She holds duality — innocence and depth — representing growth, change, and quiet inner power.",
+  },
+  "C+D": {
+    nameTH: "🍊 ชาส้ม",
+    nameEng: "🍊 Orange",
+    descriptionTH:
+      "คุณเป็นคนแข็งแกร่งแต่ไม่แข็งกระด้าง เด็ดเดี่ยวแต่เปี่ยมไปด้วยเสน่ห์",
+    descriptionEng:
+      "You are strong but never harsh — determined, yet full of charm.",
+    image: Hercules,
+    tea_image: Orange,
+    god_name: "Hercules",
+    god_descriptionTH:
+      "นักรบผู้แข็งแกร่งที่สุดในตำนานกรีก เต็มไปด้วยพลังและหัวใจนักสู้ เป็นตัวแทนของความอดทน ความเสียสละ และความกล้าชนปัญหา",
+    god_descriptionEng:
+      "The strongest warrior in Greek myth — powerful with a fighter’s heart. He symbolizes endurance, sacrifice, and fearless strength.",
+  },
+  "A+D": {
+    nameTH: "🌿 ชาใบเตย",
+    nameEng: "🌿 Pandan",
+    descriptionTH:
+      "คุณคือคนที่มีไหวพริบและเสน่ห์นุ่มนวล มีความกล้าแบบเงียบๆ และรู้จักใช้คำพูดในเวลาที่เหมาะสม",
+    descriptionEng:
+      "You have subtle wit and charm, quiet bravery, and the wisdom to speak when it matters most.",
+    image: Perseus,
+    tea_image: Baitoey,
+    god_name: "Perseus",
+    god_descriptionTH:
+      "วีรบุรุษผู้เอาชนะเมดูซ่า เป็นคนกล้าหาญ ซื่อสัตย์และจริงใจ เป็นตัวแทนของการใช้ไหวพริบและความมุ่งมั่นอย่างแน่วแน่",
+    god_descriptionEng:
+      "The hero who defeated Medusa — brave, sincere, and loyal. He stands for clever action and unwavering determination.",
   },
 };
 
@@ -160,6 +408,11 @@ function Quiz({ onRestart }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null); // Track the selected answer
   const [scores, setScores] = useState({});
   const [result, setResult] = useState(null);
+  const storedLanguage = localStorage.getItem("language");
+  const [language, setLanguage] = useState(storedLanguage || "th");
+
+  // is english
+  const isEnglish = language === "en";
 
   function handleAnswer(drink) {
     setScores((prevScores) => {
@@ -200,8 +453,14 @@ function Quiz({ onRestart }) {
         maxDrinks.push(drink);
       }
     }
-
-    let maxDrink = maxDrinks.sort().join("+");
+    let maxDrink = maxDrinks[0];
+    if (maxDrinks.length > 1) {
+      maxDrink = maxDrinks.sort().join("+");
+      // we support only A+B, B+C, C+D, A+D // if not, we random from 2 of them
+      if (!["A+B", "B+C", "C+D", "A+D"].includes(maxDrink)) {
+        maxDrink = maxDrinks[Math.floor(Math.random() * maxDrinks.length)];
+      }
+    }
 
     setResult(maxDrink);
   }
@@ -214,18 +473,35 @@ function Quiz({ onRestart }) {
       onRestart();
     }
   }
+  
+  // useEffect(() => {
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   const testResult = urlParams.get("result");
+  //   if (testResult) {
+  //     console.log("Test Result: ", testResult);
+  //     setResult(testResult);
+  //   }
+  // }, []);
 
   if (result) {
     return (
       <Result
         drink={result}
-        name={drinks[result].name}
-        description={drinks[result].description}
-        drinkImage={MatchLatte}
+        language={language}
+        name={isEnglish ? drinks[result].nameEng : drinks[result].nameTH}
+        description={
+          isEnglish
+            ? drinks[result].descriptionEng
+            : drinks[result].descriptionTH
+        }
         restartQuiz={restartQuiz}
         godName={drinks[result].god_name}
         godImage={drinks[result].image}
-        godDescription={drinks[result].god_description}
+        godDescription={
+          isEnglish
+            ? drinks[result].god_descriptionEng
+            : drinks[result].god_descriptionTH
+        }
         teaImage={drinks[result].tea_image}
       />
     );
@@ -234,7 +510,8 @@ function Quiz({ onRestart }) {
   return (
     <div className="quiz-container-with-next">
       <Question
-        question={questions[currentQuestion].question}
+        question={questions[currentQuestion]}
+        language={language}
         options={questions[currentQuestion].options}
         onAnswer={handleAnswer}
         selectedAnswer={selectedAnswer}
@@ -245,7 +522,7 @@ function Quiz({ onRestart }) {
         onClick={handleNextQuestion}
         disabled={!selectedAnswer} // Disable the button until an answer is selected
       >
-        ถัดไป &gt;
+        {getText("next", language)}
       </button>
     </div>
   );

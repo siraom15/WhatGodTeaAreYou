@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Itim&family=Sriracha&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&family=Itim&family=Sriracha&display=swap");
 
 .center-layout {
   display: flex;
@@ -105,4 +105,8 @@ button {
 button:hover {
   background-color: #ad6d3c;
   transition-duration: 30ms;
+}
+
+.language-selection {
+  margin-top: 10px;
 }

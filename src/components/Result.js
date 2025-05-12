@@ -1,33 +1,36 @@
 import React from "react";
 import "../styles/result.css";
+import { getText } from "../translations";
 
 function Result({
   drink,
   description,
-  drinkImage,
   restartQuiz,
   name,
   godName,
   godImage,
   godDescription,
   teaImage,
+  language,
 }) {
   return (
     <div className="borderedArea">
       <div className="resultContainer">
         <div className="resultHeader">
-          <h3>˙⋆❅ Your Special Drink ❅˙⋆</h3>
+          <h3>˙⋆❅ {getText("resultTitle", language)} ❅˙⋆</h3>
         </div>
 
         <div className="resultDrink">
-          <h1>คุณเปรียบเสมือน "{godName}"</h1>
+          <h1>
+            {getText("resultLike", language)} "{godName}"
+          </h1>
           <img src={godImage} alt={drink} />
           <p>{godDescription}</p>
         </div>
 
         <div className="resultPair">
           <div className="pairLeft">
-            <h4>ชาที่เหมาะกับคุณ</h4>
+            <h4>{getText("teaForYou", language)}</h4>
             <h3>{name}</h3>
             <p>{description}</p>
           </div>
@@ -47,7 +50,7 @@ function Result({
       </div>
 
       <button className="quizAgain" onClick={restartQuiz}>
-        ทำแบบทดสอบอีกครั้ง &gt;
+        {getText("retest", language)} &gt;
       </button>
     </div>
   );
